@@ -1,0 +1,72 @@
+<!-- <section id="login-section">
+    <div id="fondo">
+        <div id="presentacion">
+            <img src="/images/logo-PH.png" alt="" id="logo-ph">
+            <p>Administración ParkHub</p>
+            <p id="motto-cochera">Acceso fácil, seguridad garantizada.</p>
+        </div>
+        
+        <form id="login-form">
+                <input type="text" name="usuario" class="input" id="usuario" [(ngModel)]="datosLogin.username">
+                <label for="usuario">Usuario</label>
+        
+                <input type="password" name="contraseña" class="input" id="contraseña" [(ngModel)]="datosLogin.password" [type]="visible ? 'text' : 'password'">           
+                <label for="contraseña">Contraseña</label>
+                    
+                <div id="mostrar-contraseña">
+                    <input type="checkbox" name="mostrar-contraseña" id="mostrar-contraseña" (click)="cambiarVisibilidad()">
+                    <label for="mostrar-contraseña">Mostrar contraseña</label>
+                </div>
+            
+            <button type="button" id="boton-login" (click)="login()">Iniciar sesión</button>
+        </form>
+    </div>
+
+</section> -->
+
+
+<link rel="stylesheet" href="login.component.scss">
+
+<main>
+
+    <div class="Container">
+
+        <div class="Fondo-imagen">
+            <h1 class="Nombre-Marca">LUXURY<span>PARK</span></h1>
+        </div>
+
+        <div class="Fondo-login">
+
+            <div class="Box-login">
+
+                <!-- TITULO -->
+                <a class="Titulo"><h1>LOGIN</h1></a>
+
+                <form class="Formulario">
+
+                    <!-- LoginNombre y Apellido -->
+                    <p>  Nombre de usuario*</p>
+                    <input type="text" class="Usuario" name="usuario" id="usuario" placeholder="Ingrese su usuario..." [(ngModel)]="datosLogin.username">
+
+                    <!-- Login-Email -->
+                    <p>  Num. WhatsApp*</p>
+                    <input class="Num" id="Num" type="tel" name="Num" placeholder="Ingrese su numero de celular..."/>
+
+                    <!-- Contraseña -->
+                    <p>  Contraseña*</p>
+                    <input class="Password" id="contraseña" type="password" name="contraseña" placeholder="Ingrese su contraseña..." [(ngModel)]="datosLogin.password">           
+
+                    <!-- Boton ingresar sesion -->
+                    <button type="button" class="Boton-Login" id="boton-login" (click)="login()"> <p>INICIAR SESIÓN</p></button>
+
+                </form>
+
+                <!-- <a [routerLink]="['/registro']">Registrarse</a> -->
+                
+            </div>
+
+        </div>
+        
+    </div>
+
+</main>

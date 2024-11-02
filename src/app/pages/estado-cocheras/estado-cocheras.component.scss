@@ -1,0 +1,111 @@
+@use "./../../../../public/styles/colores.scss";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#estado-cocheras-section{
+    position: relative;
+    
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: colores.$color-marca;
+
+}
+
+.tabla{
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-spacing: 0 15px;
+    font-family: 'Roboto', sans-serif;
+    color: colores.$color-principal;
+    background-color: colores.$color-fondo;
+
+    .Div-For{
+        height: 65px;
+
+        &:hover{
+            background-color: rgb(250, 247, 233);
+        }
+    }
+
+    .header-tabla{
+        font-weight: 500;
+        font-size: 19px;
+        height: 35px;
+        background-color: colores.$color-principal;
+        color: colores.$color-texto-invertido;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    >div{
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr 150px;
+        padding: 5px;
+        border-bottom: 1px solid colores.$color-tabla;
+        justify-items: center;
+        align-items: center;
+    }
+}
+.iconos-acciones{
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    padding: 5px 15px 5px 0px;
+
+    &:hover{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+.disponibilidad{
+    width: 115px;
+    padding: 3px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.Accion-Habilitado{
+    cursor: pointer;
+    color: colores.$color-correcto;
+    font-size: 18px;
+    font-weight: 500;
+}
+.Accion-Habilitado:hover{
+    font-size: 20px;
+}
+
+.Accion-Deshabilitdo{
+    color: colores.$color-deshabilitado;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 0px 20px 0px;
+}
+
+.boton-Agregar{
+    cursor: pointer;
+    font-size: 20px;
+	margin: 3px 3px 50px 3px;
+	padding: 10px 50px;
+	background-color: colores.$color-principal;
+	color: colores.$color-texto-invertido;
+	border-radius: 30px;
+
+	&:hover{
+		background-color: colores.$color-texto;
+        color: colores.$color-marca;
+        font-size: 22px ;
+
+	}
+}
+
+.Section-Boton-Agregar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

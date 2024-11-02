@@ -1,0 +1,24 @@
+
+
+<header class="header">
+
+    <div class="header__container">
+
+      <h1 class="header__title">LUXURY PARK</h1>
+
+      <nav class="header__nav">
+        <a [routerLink]="['/estado-cocheras']" routerLinkActive="active" class="header__link">Estado de cocheras</a>
+        <a [routerLink]="['/reportes']" routerLinkActive="active" class="header__link">Reportes</a>
+        <a [routerLink]="['/a']" routerLinkActive="active" class="header__link">Precios</a>
+      </nav>
+
+      <button class="header__modal-btn">
+        <div class="dropdown-content">
+            <a (click)="logOut()" id="boton-logout">Cerrar sesión</a>
+        </div>
+
+    </button>
+
+    </div>
+
+  </header>

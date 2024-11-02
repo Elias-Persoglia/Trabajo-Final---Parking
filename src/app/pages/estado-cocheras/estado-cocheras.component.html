@@ -1,0 +1,68 @@
+<section id="estado-cocheras-section">
+    <app-header></app-header>
+
+    <main>
+
+        <div class="tabla">
+
+            <div class="header-tabla">
+
+                <div>Nro</div>
+                <div>Disponibilidad</div>
+                <div>Ingreso</div>
+                <div>Acciones</div>
+
+            </div>
+
+            @for(cochera of filas; track cochera.id){  
+
+                @if (!cochera.eliminada) {
+
+                    <div class="Div-For">
+
+                        <div>{{ cochera.id }}</div>
+
+                        @if (cochera.activo) {
+                            <button (click)="abrirModalCerrarParking(cochera.id)">{{ cochera.activo.patente }}</button>
+                        } @else if (cochera.deshabilitada) {
+                            <div class="disponibilidad Accion-Deshabilitdo">No disponible</div>
+                        } @else {
+                            <button class="disponibilidad Accion-Habilitado" (click)="abrirModalNuevoParking(cochera.id)">Disponible</button>
+                        }
+
+                        <div>{{ cochera.activo?.horaIngreso }}</div>
+
+                        <div class="acciones-container">
+
+                            <button (click)="habilitarCochera(cochera.id)">
+                                <img src="/images/Icono Tilde.png" alt="Habilitar"  class="iconos-acciones">
+                            </button>
+
+                            <button (click)="deshabilitarCochera(cochera.id)">
+                                <img src="/images/Icono Cruz.png" alt="Deshabilitar"  class="iconos-acciones">
+                            </button>
+                            
+                            <button (click)="abrirModalEliminarGarage(cochera.id)">
+                              <img src="/images/Icono-borrar.png" alt="Eliminar" class="iconos-acciones">
+                            </button>
+                            
+                        </div>
+
+                    </div>
+                }
+            }
+
+        </div>
+        
+            <div class="Section-Boton-Agregar">
+                <button (click)="agregarCochera()" class="boton-Agregar">Agregar cochera</button>
+            </div>
+        
+    </main>
+
+</section>
+
+
+
+
+
